@@ -80,7 +80,7 @@ open class FeedFragment : Fragment() {
         //Return the posts in descending order. E.g: newer posts appear first.
         query.addDescendingOrder("createdAt")
 
-        //TODO: Only return the most recent 20 posts
+        //Only returns the most recent 20 posts
         query.findInBackground(object: FindCallback<Post> {
             override fun done(posts: MutableList<Post>?, e: ParseException?) {
                 if(e != null){
